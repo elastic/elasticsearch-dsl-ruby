@@ -1,9 +1,6 @@
 # Elasticsearch::DSL
 
-The `elasticsearch-dsl` library provides a Ruby API for
-the [Elasticsearch Query DSL](http://www.elasticsearch.com/guide/en/elasticsearch/reference/current/query-dsl.html).
-
-The library is compatible with Ruby 1.9 or higher and Elasticsearch 1.0 and higher.
+The `elasticsearch-dsl` library provides a Ruby API for the [Elasticsearch Query DSL](http://www.elasticsearch.com/guide/en/elasticsearch/reference/current/query-dsl.html).
 
 ## Installation
 
@@ -13,12 +10,12 @@ Install the package from [Rubygems](https://rubygems.org):
 
 To use an unreleased version, either add it to your `Gemfile` for [Bundler](http://gembundler.com):
 
-    gem 'elasticsearch-dsl', git: 'git://github.com/elasticsearch/elasticsearch-ruby.git'
+    gem 'elasticsearch-dsl', git: 'git://github.com/elasticsearch/elasticsearch-dsl-ruby.git'
 
 or install it from a source code checkout:
 
-    git clone https://github.com/elasticsearch/elasticsearch-ruby.git
-    cd elasticsearch-ruby/elasticsearch-dsl
+    git clone https://github.com/elasticsearch/elasticsearch-dsl-ruby.git
+    cd elasticsearch-dsl-ruby
     bundle install
     rake install
 
@@ -290,24 +287,4 @@ s.to_hash
 
 ## Development
 
-To work on the code, clone the repository and install the dependencies:
-
-```
-git clone https://github.com/elasticsearch/elasticsearch-ruby.git
-cd elasticsearch-ruby/elasticsearch-dsl/
-bundle install
-```
-
-Use the Rake tasks to run the test suites:
-
-```
-bundle exec rake test:unit
-bundle exec rake test:integration
-```
-
-To launch a separate Elasticsearch server for integration tests,
-see instructions in the main [README](../README.md#development).
-
-## License
-
-This software is licensed under the [Apache 2 license](./LICENSE).
+See [CONTRIBUTING](https://github.com/elastic/elasticsearch-dsl-ruby/blob/main/CONTRIBUTING.md).
