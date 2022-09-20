@@ -17,7 +17,7 @@
 
 require 'spec_helper'
 
-describe Elasticsearch::DSL::Search::Queries::DisMax do
+describe Elasticsearch::DSL::Inquiry::Queries::DisMax do
 
   describe '#to_hash' do
 

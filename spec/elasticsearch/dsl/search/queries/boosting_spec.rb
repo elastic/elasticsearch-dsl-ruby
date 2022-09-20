@@ -17,7 +17,7 @@
 
 require 'spec_helper'
 
-describe Elasticsearch::DSL::Search::Queries::Boosting do
+describe Elasticsearch::DSL::Inquiry::Queries::Boosting do
 
   describe '#to_hash' do
 

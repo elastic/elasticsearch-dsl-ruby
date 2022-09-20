@@ -17,7 +17,7 @@
 
 require 'spec_helper'
 
-describe Elasticsearch::DSL::Search::Aggregations::Max do
+describe Elasticsearch::DSL::Inquiry::Aggregations::Max do
 
   let(:search) do
     described_class.new

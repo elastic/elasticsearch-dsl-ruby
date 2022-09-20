@@ -17,7 +17,7 @@
 
 require 'spec_helper'
 
-describe Elasticsearch::DSL::Search::Filters::HasParent do
+describe Elasticsearch::DSL::Inquiry::Filters::HasParent do
 
   describe '#to_hash' do
 

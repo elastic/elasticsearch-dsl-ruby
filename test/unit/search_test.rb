@@ -20,28 +20,28 @@ require 'test_helper'
 module Elasticsearch
   module Test
     class SearchTest < ::Elasticsearch::Test::UnitTestCase
-      subject { Elasticsearch::DSL::Search::Search.new }
+      subject { Elasticsearch::DSL::Inquiry::Inquiry.new }
 
       context "The Search module" do
         should "have the search method on instance" do
           class DummySearchReceiver
-            include Elasticsearch::DSL::Search
+            include Elasticsearch::DSL::Inquiry
           end
 
-          assert_instance_of Elasticsearch::DSL::Search::Search, DummySearchReceiver.new.search
+          assert_instance_of Elasticsearch::DSL::Inquiry::Inquiry, DummySearchReceiver.new.search
         end
 
         should "have the search method on module" do
           class DummySearchReceiver
-            include Elasticsearch::DSL::Search
+            include Elasticsearch::DSL::Inquiry
           end
 
-          assert_instance_of Elasticsearch::DSL::Search::Search, Elasticsearch::DSL::Search.search
+          assert_instance_of Elasticsearch::DSL::Inquiry::Inquiry, Elasticsearch::DSL::Inquiry.search
         end
 
         should "have access to the calling context" do
           class DummySearchReceiver
-            include Elasticsearch::DSL::Search
+            include Elasticsearch::DSL::Inquiry
 
             def initialize
               @other_value = 'foo'
@@ -85,14 +85,14 @@ module Elasticsearch
           end
 
           should "take the query as a block" do
-            Elasticsearch::DSL::Search::Query.expects(:new).returns({foo: 'bar'})
+            Elasticsearch::DSL::Inquiry::Query.expects(:new).returns({foo: 'bar'})
             subject.query do; end
             assert_equal({query: { foo: 'bar' }}, subject.to_hash)
           end
 
           should "allow chaining" do
-            assert_instance_of Elasticsearch::DSL::Search::Search, subject.query(:foo)
-            assert_instance_of Elasticsearch::DSL::Search::Search, subject.query(:foo).query(:bar)
+            assert_instance_of Elasticsearch::DSL::Inquiry::Inquiry, subject.query(:foo)
+            assert_instance_of Elasticsearch::DSL::Inquiry::Inquiry, subject.query(:foo).query(:bar)
           end
 
           should "be converted to hash" do
@@ -116,14 +116,14 @@ module Elasticsearch
           end
 
           should "take the filter as a block" do
-            Elasticsearch::DSL::Search::Filter.expects(:new).returns({foo: 'bar'})
+            Elasticsearch::DSL::Inquiry::Filter.expects(:new).returns({foo: 'bar'})
             subject.filter do; end
             assert_equal({filter: { foo: 'bar' }}, subject.to_hash)
           end
 
           should "allow chaining" do
-            assert_instance_of Elasticsearch::DSL::Search::Search, subject.filter(:foo)
-            assert_instance_of Elasticsearch::DSL::Search::Search, subject.filter(:foo).filter(:bar)
+            assert_instance_of Elasticsearch::DSL::Inquiry::Inquiry, subject.filter(:foo)
+            assert_instance_of Elasticsearch::DSL::Inquiry::Inquiry, subject.filter(:foo).filter(:bar)
           end
 
           should "be converted to hash" do
@@ -147,14 +147,14 @@ module Elasticsearch
           end
 
           should "take the filter as a block" do
-            Elasticsearch::DSL::Search::Filter.expects(:new).returns({foo: 'bar'})
+            Elasticsearch::DSL::Inquiry::Filter.expects(:new).returns({foo: 'bar'})
             subject.post_filter do; end
             assert_equal({post_filter: { foo: 'bar' }}, subject.to_hash)
           end
 
           should "allow chaining" do
-            assert_instance_of Elasticsearch::DSL::Search::Search, subject.post_filter(:foo)
-            assert_instance_of Elasticsearch::DSL::Search::Search, subject.post_filter(:foo).post_filter(:bar)
+            assert_instance_of Elasticsearch::DSL::Inquiry::Inquiry, subject.post_filter(:foo)
+            assert_instance_of Elasticsearch::DSL::Inquiry::Inquiry, subject.post_filter(:foo).post_filter(:bar)
           end
 
           should "be converted to hash" do
@@ -178,14 +178,14 @@ module Elasticsearch
           end
 
           should "take the aggregation as a block" do
-            Elasticsearch::DSL::Search::Aggregation.expects(:new).returns({tam: 'tam'})
+            Elasticsearch::DSL::Inquiry::Aggregation.expects(:new).returns({tam: 'tam'})
             subject.aggregation :foo do; end
             assert_equal({aggregations: { foo: { tam: 'tam' } } }, subject.to_hash)
           end
 
           should "allow chaining" do
-            assert_instance_of Elasticsearch::DSL::Search::Search, subject.aggregation(:foo)
-            assert_instance_of Elasticsearch::DSL::Search::Search, subject.aggregation(:foo).aggregation(:bar)
+            assert_instance_of Elasticsearch::DSL::Inquiry::Inquiry, subject.aggregation(:foo)
+            assert_instance_of Elasticsearch::DSL::Inquiry::Inquiry, subject.aggregation(:foo).aggregation(:bar)
           end
 
           should "be converted to hash" do
@@ -211,11 +211,11 @@ module Elasticsearch
           should "have a getter method" do
             assert_nil subject.sort
             subject.sort :foo
-            assert_instance_of Elasticsearch::DSL::Search::Sort, subject.sort
+            assert_instance_of Elasticsearch::DSL::Inquiry::Sort, subject.sort
           end
 
           should "have a setter method" do
-            sort_object = Elasticsearch::DSL::Search::Sort.new foo: { order: 'desc' }, bar: { order: 'asc' }
+            sort_object = Elasticsearch::DSL::Inquiry::Sort.new foo: { order: 'desc' }, bar: { order: 'asc' }
             subject.sort = sort_object
             assert_not_nil subject.sort
             assert_equal( { sort: [ { foo: { order: "desc" }, bar: { order: "asc" } } ] }, subject.to_hash )

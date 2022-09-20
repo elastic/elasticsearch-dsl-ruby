@@ -17,7 +17,7 @@
 
 require 'spec_helper'
 
-describe Elasticsearch::DSL::Search::Filters::Limit do
+describe Elasticsearch::DSL::Inquiry::Filters::Limit do
 
   let(:search) do
     described_class.new

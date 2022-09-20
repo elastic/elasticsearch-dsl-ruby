@@ -17,7 +17,7 @@
 
 require 'spec_helper'
 
-describe Elasticsearch::DSL::Search::Filters::Bool do
+describe Elasticsearch::DSL::Inquiry::Filters::Bool do
 
   let(:search) do
     described_class.new
@@ -35,7 +35,7 @@ describe Elasticsearch::DSL::Search::Filters::Bool do
     context 'when an object instance is provided' do
 
       let(:search) do
-        described_class.new.must( Elasticsearch::DSL::Search::Filters::Term.new foo: 'bar')
+        described_class.new.must( Elasticsearch::DSL::Inquiry::Filters::Term.new foo: 'bar')
       end
 
       it 'applies the condition' do
@@ -46,9 +46,9 @@ describe Elasticsearch::DSL::Search::Filters::Bool do
 
         let(:search) do
           described_class.new do
-            must(Elasticsearch::DSL::Search::Filters::Term.new foo: 'bar')
-            must_not(Elasticsearch::DSL::Search::Filters::Term.new moo: 'bam')
-            should(Elasticsearch::DSL::Search::Filters::Term.new xoo: 'bax')
+            must(Elasticsearch::DSL::Inquiry::Filters::Term.new foo: 'bar')
+            must_not(Elasticsearch::DSL::Inquiry::Filters::Term.new moo: 'bam')
+            should(Elasticsearch::DSL::Inquiry::Filters::Term.new xoo: 'bax')
           end
         end
 
@@ -65,11 +65,11 @@ describe Elasticsearch::DSL::Search::Filters::Bool do
 
         let(:search) do
           described_class.new do
-            must(Elasticsearch::DSL::Search::Filters::Term.new foo: 'bar')
-            must(Elasticsearch::DSL::Search::Filters::Term.new moo: 'bam')
+            must(Elasticsearch::DSL::Inquiry::Filters::Term.new foo: 'bar')
+            must(Elasticsearch::DSL::Inquiry::Filters::Term.new moo: 'bam')
 
-            should(Elasticsearch::DSL::Search::Filters::Term.new xoo: 'bax')
-            should(Elasticsearch::DSL::Search::Filters::Term.new zoo: 'baz')
+            should(Elasticsearch::DSL::Inquiry::Filters::Term.new xoo: 'bax')
+            should(Elasticsearch::DSL::Inquiry::Filters::Term.new zoo: 'baz')
           end
         end
 

@@ -17,7 +17,7 @@
 
 require 'spec_helper'
 
-describe Elasticsearch::DSL::Search::Queries::ConstantScore do
+describe Elasticsearch::DSL::Inquiry::Queries::ConstantScore do
 
   describe '#to_hash' do
 

@@ -20,10 +20,10 @@ require 'test_helper'
 module Elasticsearch
   module Test
     class SearchIntegrationTest < ::Elasticsearch::Test::IntegrationTestCase
-      include Elasticsearch::DSL::Search
+      include Elasticsearch::DSL::Inquiry
 
       class MySearch
-        include Elasticsearch::DSL::Search
+        include Elasticsearch::DSL::Inquiry
 
         def initialize(q)
           @q = q

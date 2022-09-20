@@ -17,7 +17,7 @@
 
 require 'spec_helper'
 
-describe Elasticsearch::DSL::Search::Aggregations::Terms do
+describe Elasticsearch::DSL::Inquiry::Aggregations::Terms do
 
   let(:search) do
     described_class.new

@@ -17,7 +17,7 @@
 
 require 'spec_helper'
 
-describe Elasticsearch::DSL::Search::Queries::QueryString do
+describe Elasticsearch::DSL::Inquiry::Queries::QueryString do
   describe '#to_hash' do
     let(:search) do
       described_class.new

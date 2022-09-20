@@ -17,7 +17,7 @@
 
 require 'spec_helper'
 
-describe Elasticsearch::DSL::Search::Aggregations::SignificantText do
+describe Elasticsearch::DSL::Inquiry::Aggregations::SignificantText do
 
   let(:search) do
     described_class.new

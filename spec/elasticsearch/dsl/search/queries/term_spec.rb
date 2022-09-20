@@ -17,7 +17,7 @@
 
 require 'spec_helper'
 
-describe Elasticsearch::DSL::Search::Queries::Term do
+describe Elasticsearch::DSL::Inquiry::Queries::Term do
 
   describe '#to_hash' do
 

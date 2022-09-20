@@ -17,7 +17,7 @@
 
 require 'spec_helper'
 
-describe Elasticsearch::DSL::Search::Filters::MatchAll do
+describe Elasticsearch::DSL::Inquiry::Filters::MatchAll do
 
   let(:search) do
     described_class.new

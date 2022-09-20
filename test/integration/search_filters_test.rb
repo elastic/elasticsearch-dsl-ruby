@@ -22,7 +22,7 @@ require 'test_helper'
 module Elasticsearch
   module Test
     class FiltersIntegrationTest < ::Elasticsearch::Test::IntegrationTestCase
-      include Elasticsearch::DSL::Search
+      include Elasticsearch::DSL::Inquiry
 
       context "Filters integration" do
         setup do

@@ -17,7 +17,7 @@
 
 require 'spec_helper'
 
-describe Elasticsearch::DSL::Search::Aggregations::MinBucket do
+describe Elasticsearch::DSL::Inquiry::Aggregations::MinBucket do
 
   let(:search) do
     described_class.new

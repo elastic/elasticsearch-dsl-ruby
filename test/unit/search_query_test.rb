@@ -20,32 +20,32 @@ require 'test_helper'
 module Elasticsearch
   module Test
     class SearchQueryTest < ::Elasticsearch::Test::UnitTestCase
-      subject { Elasticsearch::DSL::Search::Query.new }
+      subject { Elasticsearch::DSL::Inquiry::Query.new }
 
       context "Search Query" do
 
         should "be serializable to a Hash" do
           assert_equal( {}, subject.to_hash )
 
-          subject = Elasticsearch::DSL::Search::Query.new
+          subject = Elasticsearch::DSL::Inquiry::Query.new
           subject.instance_variable_set(:@value, {})
           assert_equal( {}, subject.to_hash )
         end
 
         should "evaluate the block and return itself" do
           block   = Proc.new { 1+1 }
-          subject = Elasticsearch::DSL::Search::Query.new &block
+          subject = Elasticsearch::DSL::Inquiry::Query.new &block
 
           subject.expects(:instance_eval)
-          assert_instance_of Elasticsearch::DSL::Search::Query, subject.call
+          assert_instance_of Elasticsearch::DSL::Inquiry::Query, subject.call
         end
 
         should "call the block and return itself" do
           block   = Proc.new { |s| 1+1 }
-          subject = Elasticsearch::DSL::Search::Query.new &block
+          subject = Elasticsearch::DSL::Inquiry::Query.new &block
 
           block.expects(:call)
-          assert_instance_of Elasticsearch::DSL::Search::Query, subject.call
+          assert_instance_of Elasticsearch::DSL::Inquiry::Query, subject.call
         end
 
         should "define the value with query methods" do

@@ -17,7 +17,7 @@
 
 require 'spec_helper'
 
-describe Elasticsearch::DSL::Search::Filters::Type do
+describe Elasticsearch::DSL::Inquiry::Filters::Type do
 
   let(:search) do
     described_class.new

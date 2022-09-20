@@ -17,7 +17,7 @@
 
 require 'spec_helper'
 
-describe Elasticsearch::DSL::Search::Queries::GeoShape do
+describe Elasticsearch::DSL::Inquiry::Queries::GeoShape do
 
   describe '#to_hash' do
 

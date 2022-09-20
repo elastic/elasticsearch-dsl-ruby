@@ -17,6 +17,6 @@
 
 module Elasticsearch
   module DSL
-    VERSION = "0.1.10"
+    VERSION = "0.1.12"
   end
 end

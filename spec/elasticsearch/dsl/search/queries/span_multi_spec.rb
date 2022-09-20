@@ -17,7 +17,7 @@
 
 require 'spec_helper'
 
-describe Elasticsearch::DSL::Search::Queries::SpanMulti do
+describe Elasticsearch::DSL::Inquiry::Queries::SpanMulti do
 
   describe '#to_hash' do
 

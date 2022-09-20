@@ -17,7 +17,7 @@
 
 require 'spec_helper'
 
-describe Elasticsearch::DSL::Search::Aggregations::CumulativeSum do
+describe Elasticsearch::DSL::Inquiry::Aggregations::CumulativeSum do
 
   let(:search) do
     described_class.new

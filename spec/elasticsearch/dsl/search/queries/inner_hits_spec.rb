@@ -17,7 +17,7 @@
 
 require 'spec_helper'
 
-describe Elasticsearch::DSL::Search::Queries::InnerHits do
+describe Elasticsearch::DSL::Inquiry::Queries::InnerHits do
 
   describe '#to_hash' do
 

@@ -20,7 +20,7 @@ require 'test_helper'
 module Elasticsearch
   module Test
     class SizeIntegrationTest < ::Elasticsearch::Test::IntegrationTestCase
-      include Elasticsearch::DSL::Search
+      include Elasticsearch::DSL::Inquiry
 
         context "Search results pagination" do
           setup do

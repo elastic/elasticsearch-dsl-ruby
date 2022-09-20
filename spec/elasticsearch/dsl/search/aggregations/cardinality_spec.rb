@@ -17,7 +17,7 @@
 
 require 'spec_helper'
 
-describe Elasticsearch::DSL::Search::Aggregations::Cardinality do
+describe Elasticsearch::DSL::Inquiry::Aggregations::Cardinality do
 
   let(:search) do
     described_class.new

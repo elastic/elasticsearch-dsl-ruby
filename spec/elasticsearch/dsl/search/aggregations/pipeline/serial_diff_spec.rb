@@ -17,7 +17,7 @@
 
 require 'spec_helper'
 
-describe Elasticsearch::DSL::Search::Aggregations::SerialDiff do
+describe Elasticsearch::DSL::Inquiry::Aggregations::SerialDiff do
 
   let(:search) do
     described_class.new

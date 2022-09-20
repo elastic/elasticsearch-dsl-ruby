@@ -17,7 +17,7 @@
 
 require 'spec_helper'
 
-describe Elasticsearch::DSL::Search::Aggregations::DateRange do
+describe Elasticsearch::DSL::Inquiry::Aggregations::DateRange do
 
   let(:search) do
     described_class.new

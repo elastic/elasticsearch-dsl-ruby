@@ -188,7 +188,7 @@ namespace :generate do
         module Test
           module #{module_name}
             class #{class_name}Test < ::Elasticsearch::Test::UnitTestCase
-              include Elasticsearch::DSL::Search::#{module_name}
+              include Elasticsearch::DSL::Inquiry::#{module_name}
 
               context "#{class_name} #{options[:type]}" do
                 subject { #{class_name}.new }

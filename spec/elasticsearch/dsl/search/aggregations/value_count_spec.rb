@@ -17,7 +17,7 @@
 
 require 'spec_helper'
 
-describe Elasticsearch::DSL::Search::Aggregations::ValueCount do
+describe Elasticsearch::DSL::Inquiry::Aggregations::ValueCount do
 
   let(:search) do
     described_class.new

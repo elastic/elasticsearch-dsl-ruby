@@ -17,7 +17,7 @@
 
 require 'spec_helper'
 
-describe Elasticsearch::DSL::Search::Aggregations::StatsBucket do
+describe Elasticsearch::DSL::Inquiry::Aggregations::StatsBucket do
 
   let(:search) do
     described_class.new

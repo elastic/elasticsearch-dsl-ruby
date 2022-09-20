@@ -17,7 +17,7 @@
 
 require 'spec_helper'
 
-describe Elasticsearch::DSL::Search::Filters::Ids do
+describe Elasticsearch::DSL::Inquiry::Filters::Ids do
 
   describe '#to_hash' do
 

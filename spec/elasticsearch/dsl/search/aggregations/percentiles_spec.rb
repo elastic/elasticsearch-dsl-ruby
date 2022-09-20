@@ -17,7 +17,7 @@
 
 require 'spec_helper'
 
-describe Elasticsearch::DSL::Search::Aggregations::Percentiles do
+describe Elasticsearch::DSL::Inquiry::Aggregations::Percentiles do
 
   let(:search) do
     described_class.new

@@ -17,7 +17,7 @@
 
 require 'spec_helper'
 
-describe Elasticsearch::DSL::Search do
+describe Elasticsearch::DSL::Inquiry do
 
   include Elasticsearch::DSL
 

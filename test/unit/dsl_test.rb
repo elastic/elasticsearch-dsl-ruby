@@ -27,7 +27,7 @@ module Elasticsearch
 
         should "include the module in receiver" do
           assert_contains DummyDSLReceiver.included_modules, Elasticsearch::DSL
-          assert_contains DummyDSLReceiver.included_modules, Elasticsearch::DSL::Search
+          assert_contains DummyDSLReceiver.included_modules, Elasticsearch::DSL::Inquiry
         end
       end
     end

@@ -17,7 +17,7 @@
 
 require 'spec_helper'
 
-describe Elasticsearch::DSL::Search::Queries::Filtered do
+describe Elasticsearch::DSL::Inquiry::Queries::Filtered do
 
   describe '#to_hash' do
 

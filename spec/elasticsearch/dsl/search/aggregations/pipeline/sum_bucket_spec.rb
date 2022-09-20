@@ -17,7 +17,7 @@
 
 require 'spec_helper'
 
-describe Elasticsearch::DSL::Search::Aggregations::SumBucket do
+describe Elasticsearch::DSL::Inquiry::Aggregations::SumBucket do
 
   let(:search) do
     described_class.new

@@ -17,7 +17,7 @@
 
 require 'spec_helper'
 
-describe Elasticsearch::DSL::Search::Filters::GeohashCell do
+describe Elasticsearch::DSL::Inquiry::Filters::GeohashCell do
 
   describe '#to_hash' do
 

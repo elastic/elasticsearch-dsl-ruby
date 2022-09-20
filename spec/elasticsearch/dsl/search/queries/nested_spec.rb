@@ -17,7 +17,7 @@
 
 require 'spec_helper'
 
-describe Elasticsearch::DSL::Search::Queries::Nested do
+describe Elasticsearch::DSL::Inquiry::Queries::Nested do
 
   describe '#to_hash' do
 

@@ -20,7 +20,7 @@ require 'test_helper'
 module Elasticsearch
   module Test
     class AggregationsIntegrationTest < ::Elasticsearch::Test::IntegrationTestCase
-      include Elasticsearch::DSL::Search
+      include Elasticsearch::DSL::Inquiry
 
       context "Aggregations integration" do
         setup do

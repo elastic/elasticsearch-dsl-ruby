@@ -17,7 +17,7 @@
 
 require 'spec_helper'
 
-describe Elasticsearch::DSL::Search::Filters::GeoPolygon do
+describe Elasticsearch::DSL::Inquiry::Filters::GeoPolygon do
 
   describe '#to_hash' do
 

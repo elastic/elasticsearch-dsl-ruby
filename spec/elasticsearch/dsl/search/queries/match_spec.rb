@@ -17,7 +17,7 @@
 
 require 'spec_helper'
 
-describe Elasticsearch::DSL::Search::Queries::Match do
+describe Elasticsearch::DSL::Inquiry::Queries::Match do
 
   describe '#to_hash' do
 

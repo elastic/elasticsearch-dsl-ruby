@@ -17,7 +17,7 @@
 
 require 'spec_helper'
 
-describe Elasticsearch::DSL::Search::Aggregations::IpRange do
+describe Elasticsearch::DSL::Inquiry::Aggregations::IpRange do
 
   let(:search) do
     described_class.new

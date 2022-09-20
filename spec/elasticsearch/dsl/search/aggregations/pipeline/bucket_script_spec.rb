@@ -17,7 +17,7 @@
 
 require 'spec_helper'
 
-describe Elasticsearch::DSL::Search::Aggregations::BucketScript do
+describe Elasticsearch::DSL::Inquiry::Aggregations::BucketScript do
 
   let(:search) do
     described_class.new

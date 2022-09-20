@@ -21,10 +21,10 @@ module Elasticsearch
   module Test
     class HighlightTest < ::Elasticsearch::Test::UnitTestCase
       context "Search highlight" do
-        subject { Elasticsearch::DSL::Search::Highlight.new }
+        subject { Elasticsearch::DSL::Inquiry::Highlight.new }
 
         should "take a Hash" do
-          subject  = Elasticsearch::DSL::Search::Highlight.new fields: { 'foo' => {} }, pre_tags: ['*'], post_tags: ['*']
+          subject  = Elasticsearch::DSL::Inquiry::Highlight.new fields: { 'foo' => {} }, pre_tags: ['*'], post_tags: ['*']
 
           assert_equal({ fields: { 'foo' => {} }, pre_tags: ['*'], post_tags: ['*'] }, subject.to_hash)
         end

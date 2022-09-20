@@ -18,23 +18,23 @@
 require 'elasticsearch/dsl/version'
 
 require 'elasticsearch/dsl/utils'
-require 'elasticsearch/dsl/search/base_component'
-require 'elasticsearch/dsl/search/base_compound_filter_component'
-require 'elasticsearch/dsl/search/base_aggregation_component'
-require 'elasticsearch/dsl/search/query'
-require 'elasticsearch/dsl/search/collapse'
-require 'elasticsearch/dsl/search/filter'
-require 'elasticsearch/dsl/search/aggregation'
-require 'elasticsearch/dsl/search/highlight'
-require 'elasticsearch/dsl/search/sort'
-require 'elasticsearch/dsl/search/options'
-require 'elasticsearch/dsl/search/suggest'
+require 'elasticsearch/dsl/inquiry/base_component'
+require 'elasticsearch/dsl/inquiry/base_compound_filter_component'
+require 'elasticsearch/dsl/inquiry/base_aggregation_component'
+require 'elasticsearch/dsl/inquiry/query'
+require 'elasticsearch/dsl/inquiry/collapse'
+require 'elasticsearch/dsl/inquiry/filter'
+require 'elasticsearch/dsl/inquiry/aggregation'
+require 'elasticsearch/dsl/inquiry/highlight'
+require 'elasticsearch/dsl/inquiry/sort'
+require 'elasticsearch/dsl/inquiry/options'
+require 'elasticsearch/dsl/inquiry/suggest'
 
-Dir[ File.expand_path('../dsl/search/queries/**/*.rb', __FILE__) ].each        { |f| require f }
-Dir[ File.expand_path('../dsl/search/filters/**/*.rb', __FILE__) ].each        { |f| require f }
-Dir[ File.expand_path('../dsl/search/aggregations/**/*.rb', __FILE__) ].each   { |f| require f }
+Dir[ File.expand_path('../dsl/inquiry/queries/**/*.rb', __FILE__) ].each        { |f| require f }
+Dir[ File.expand_path('../dsl/inquiry/filters/**/*.rb', __FILE__) ].each        { |f| require f }
+Dir[ File.expand_path('../dsl/inquiry/aggregations/**/*.rb', __FILE__) ].each   { |f| require f }
 
-require 'elasticsearch/dsl/search'
+require 'elasticsearch/dsl/inquiry'
 
 module Elasticsearch
 
@@ -59,7 +59,7 @@ module Elasticsearch
   #
   module DSL
     def self.included(base)
-      base.__send__ :include, Elasticsearch::DSL::Search
+      base.__send__ :include, Elasticsearch::DSL::Inquiry
     end
   end
 end

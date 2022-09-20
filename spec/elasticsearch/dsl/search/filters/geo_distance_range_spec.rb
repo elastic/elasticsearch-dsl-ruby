@@ -17,7 +17,7 @@
 
 require 'spec_helper'
 
-describe Elasticsearch::DSL::Search::Filters::GeoDistanceRange do
+describe Elasticsearch::DSL::Inquiry::Filters::GeoDistanceRange do
 
   describe '#to_hash' do
 

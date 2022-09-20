@@ -61,8 +61,8 @@ Let's build the same definition in a more imperative fashion:
 require 'elasticsearch/dsl'
 include Elasticsearch::DSL
 
-definition = Search::Search.new
-definition.query = Search::Queries::Match.new title: 'test'
+definition = Inquiry::Inquiry.new
+definition.query = Inquiry::Queries::Match.new title: 'test'
 
 definition.to_hash
 # => { query: { match: { title: "test"} } }

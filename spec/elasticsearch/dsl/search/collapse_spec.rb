@@ -17,14 +17,14 @@
 
 require 'spec_helper'
 
-describe Elasticsearch::DSL::Search::Collapse do
+describe Elasticsearch::DSL::Inquiry::Collapse do
 
   include Elasticsearch::DSL
 
   describe '#initialize' do
 
     let(:coll) do
-      Elasticsearch::DSL::Search::Collapse.new :user
+      Elasticsearch::DSL::Inquiry::Collapse.new :user
     end
 
     let(:expected_hash) do
@@ -39,7 +39,7 @@ describe Elasticsearch::DSL::Search::Collapse do
   describe '#max_concurrent_group_searches' do
 
     let(:coll) do
-      Elasticsearch::DSL::Search::Collapse.new :user do
+      Elasticsearch::DSL::Inquiry::Collapse.new :user do
         max_concurrent_group_searches 4
       end
     end
@@ -56,7 +56,7 @@ describe Elasticsearch::DSL::Search::Collapse do
   describe '#inner_hits' do
 
     let(:coll) do
-      Elasticsearch::DSL::Search::Collapse.new :user do
+      Elasticsearch::DSL::Inquiry::Collapse.new :user do
         max_concurrent_group_searches 4
         inner_hits 'last_tweet' do
           size 10

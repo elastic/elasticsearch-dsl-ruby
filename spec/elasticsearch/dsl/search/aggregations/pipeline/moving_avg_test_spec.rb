@@ -17,7 +17,7 @@
 
 require 'spec_helper'
 
-describe Elasticsearch::DSL::Search::Aggregations::MovingAvg do
+describe Elasticsearch::DSL::Inquiry::Aggregations::MovingAvg do
 
   let(:search) do
     described_class.new

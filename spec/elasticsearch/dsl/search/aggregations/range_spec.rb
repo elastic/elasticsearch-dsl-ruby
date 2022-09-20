@@ -17,7 +17,7 @@
 
 require 'spec_helper'
 
-describe Elasticsearch::DSL::Search::Aggregations::Range do
+describe Elasticsearch::DSL::Inquiry::Aggregations::Range do
 
   let(:search) do
     described_class.new

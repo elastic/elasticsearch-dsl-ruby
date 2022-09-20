@@ -17,7 +17,7 @@
 
 require 'spec_helper'
 
-describe Elasticsearch::DSL::Search::Aggregations::DateHistogram do
+describe Elasticsearch::DSL::Inquiry::Aggregations::DateHistogram do
   let(:search) do
     described_class.new
   end

@@ -20,7 +20,7 @@ require 'test_helper'
 module Elasticsearch
   module Test
     class SearchOptionsIntegrationTest < ::Elasticsearch::Test::IntegrationTestCase
-      include Elasticsearch::DSL::Search
+      include Elasticsearch::DSL::Inquiry
 
       context "Search options" do
         setup do

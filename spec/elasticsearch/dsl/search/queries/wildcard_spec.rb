@@ -17,7 +17,7 @@
 
 require 'spec_helper'
 
-describe Elasticsearch::DSL::Search::Queries::Wildcard do
+describe Elasticsearch::DSL::Inquiry::Queries::Wildcard do
 
   describe '#to_hash' do
 

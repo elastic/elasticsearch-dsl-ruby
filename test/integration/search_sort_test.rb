@@ -20,7 +20,7 @@ require 'test_helper'
 module Elasticsearch
   module Test
     class SortingIntegrationTest < ::Elasticsearch::Test::IntegrationTestCase
-      include Elasticsearch::DSL::Search
+      include Elasticsearch::DSL::Inquiry
 
       context "Sorting integration" do
         setup do

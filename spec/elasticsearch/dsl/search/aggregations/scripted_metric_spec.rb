@@ -17,7 +17,7 @@
 
 require 'spec_helper'
 
-describe Elasticsearch::DSL::Search::Aggregations::ScriptedMetric do
+describe Elasticsearch::DSL::Inquiry::Aggregations::ScriptedMetric do
 
   let(:search) do
     described_class.new

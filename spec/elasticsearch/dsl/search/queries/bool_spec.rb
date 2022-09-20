@@ -17,7 +17,7 @@
 
 require 'spec_helper'
 
-describe Elasticsearch::DSL::Search::Queries::Bool do
+describe Elasticsearch::DSL::Inquiry::Queries::Bool do
 
   describe '#to_hash' do
 
@@ -35,7 +35,7 @@ describe Elasticsearch::DSL::Search::Queries::Bool do
     context 'when an object instance is provided' do
 
       let(:search) do
-        described_class.new.must(Elasticsearch::DSL::Search::Queries::Match.new foo: 'bar')
+        described_class.new.must(Elasticsearch::DSL::Inquiry::Queries::Match.new foo: 'bar')
       end
 
       it 'applies the condition' do
@@ -46,8 +46,8 @@ describe Elasticsearch::DSL::Search::Queries::Bool do
 
         let(:search) do
           described_class.new do
-            should(Elasticsearch::DSL::Search::Queries::Term.new(tag: 'wow'))
-            should(Elasticsearch::DSL::Search::Queries::Term.new(tag: 'elasticsearch'))
+            should(Elasticsearch::DSL::Inquiry::Queries::Term.new(tag: 'wow'))
+            should(Elasticsearch::DSL::Inquiry::Queries::Term.new(tag: 'elasticsearch'))
 
             minimum_should_match 1
             boost 1.0
@@ -66,11 +66,11 @@ describe Elasticsearch::DSL::Search::Queries::Bool do
 
         let(:search) do
           described_class.new do
-            must(Elasticsearch::DSL::Search::Queries::Match.new foo: 'bar')
-            must(Elasticsearch::DSL::Search::Queries::Match.new moo: 'bam')
+            must(Elasticsearch::DSL::Inquiry::Queries::Match.new foo: 'bar')
+            must(Elasticsearch::DSL::Inquiry::Queries::Match.new moo: 'bam')
 
-            should(Elasticsearch::DSL::Search::Queries::Match.new xoo: 'bax')
-            should(Elasticsearch::DSL::Search::Queries::Match.new zoo: 'baz')
+            should(Elasticsearch::DSL::Inquiry::Queries::Match.new xoo: 'bax')
+            should(Elasticsearch::DSL::Inquiry::Queries::Match.new zoo: 'baz')
           end
         end
 
@@ -247,10 +247,10 @@ describe Elasticsearch::DSL::Search::Queries::Bool do
         end
       end
 
-      context 'when the filter is a `Elasticsearch::DSL::Search::Filter` object' do
+      context 'when the filter is a `Elasticsearch::DSL::Inquiry::Filter` object' do
 
         let(:search) do
-          filter_object = Elasticsearch::DSL::Search::Filter.new do
+          filter_object = Elasticsearch::DSL::Inquiry::Filter.new do
             term bar: 'Bar!'
           end
           described_class.new do

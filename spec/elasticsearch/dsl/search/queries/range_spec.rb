@@ -17,7 +17,7 @@
 
 require 'spec_helper'
 
-describe Elasticsearch::DSL::Search::Queries::Range do
+describe Elasticsearch::DSL::Inquiry::Queries::Range do
 
   describe '#to_hash' do
 
