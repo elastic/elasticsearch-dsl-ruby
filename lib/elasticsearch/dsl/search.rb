@@ -224,6 +224,15 @@ module Elasticsearch
           end
         end; alias_method :size=, :size
 
+        def missing(value=nil)
+          if value
+            @missing = value
+            self
+          else
+            @missing
+          end
+        end; alias_method :missing=, :missing
+
         # DSL method for building the `from` part of a search definition
         #
         # @return [self]

@@ -58,6 +58,17 @@ describe Elasticsearch::DSL::Search::Aggregations::Terms do
       end
     end
 
+    describe '#missing' do
+
+      before do
+        search.missing('bar')
+      end
+
+      it 'applies the option' do
+        expect(search.to_hash[:terms][:foo][:missing]).to eq('bar')
+      end
+    end
+
     describe '#shard_size' do
 
       before do
