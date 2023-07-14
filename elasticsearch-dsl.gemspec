@@ -24,7 +24,7 @@ Gem::Specification.new do |s|
   s.name          = 'elasticsearch-dsl'
   s.version       = Elasticsearch::DSL::VERSION
   s.authors       = ['Karel Minarik']
-  s.email         = ['karel.minarik@elasticsearch.com']
+  s.email         = ['clients-team@elastic.co']
   s.description   = %q{A Ruby DSL builder for Elasticsearch}
   s.summary       = s.description
   s.homepage      = 'https://www.elastic.co/guide/en/elasticsearch/client/ruby-api/current/index.html'
