@@ -23,8 +23,8 @@ require 'elasticsearch/dsl/version'
 Gem::Specification.new do |s|
   s.name          = 'elasticsearch-dsl'
   s.version       = Elasticsearch::DSL::VERSION
-  s.authors       = ['Karel Minarik']
-  s.email         = ['clients-team@elastic.co']
+  s.authors       = ['Elastic Client Library Maintainers']
+  s.email         = ['client-libs@elastic.co']
   s.description   = %q{A Ruby DSL builder for Elasticsearch}
   s.summary       = s.description
   s.homepage      = 'https://www.elastic.co/guide/en/elasticsearch/client/ruby-api/current/index.html'
