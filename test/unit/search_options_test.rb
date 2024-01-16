@@ -99,6 +99,11 @@ module Elasticsearch
           subject.min_score 0.5
           assert_equal( { min_score: 0.5 }, subject.to_hash )
         end
+
+        should "encode terminate_after" do
+          subject.terminate_after 10
+          assert_equal( { terminate_after: 10 }, subject.to_hash )
+        end
       end
     end
   end
