@@ -20,23 +20,11 @@ source 'https://rubygems.org'
 # Specify your gem's dependencies in elasticsearch-dsl.gemspec
 gemspec
 
-if File.exist? File.expand_path('../../elasticsearch/elasticsearch.gemspec', __FILE__)
-  gem 'elasticsearch', path: File.expand_path('../../elasticsearch', __FILE__), require: false
-end
-
-if File.exist? File.expand_path('../../elasticsearch-transport', __FILE__)
-  gem 'elasticsearch-transport', path: File.expand_path('../../elasticsearch-transport', __FILE__), require: true
-end
-
-if File.exist? File.expand_path('../../elasticsearch-api', __FILE__)
-  gem 'elasticsearch-api', path: File.expand_path('../../elasticsearch-api', __FILE__), require: false
-end
-
 group :development do
   gem 'rspec'
   if defined?(JRUBY_VERSION)
     gem 'pry-nav'
   else
-    gem 'pry-byebug'
+    gem 'debug'
   end
 end
