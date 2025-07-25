@@ -35,7 +35,8 @@ module Elasticsearch
           :indices_boost,
           :track_scores,
           :min_score,
-          :track_total_hits
+          :track_total_hits,
+          :runtime_mappings
         ]
 
         def initialize(*args, &block)

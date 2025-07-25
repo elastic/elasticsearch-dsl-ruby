@@ -57,6 +57,11 @@ module Elasticsearch
           assert_equal( { script_fields: ['foo'] }, subject.to_hash )
         end
 
+        should "encode runtime_mappings" do
+          subject.runtime_mappings ['foo']
+          assert_equal( { runtime_mappings: ['foo'] }, subject.to_hash )
+        end
+
         should "encode fielddata_fields" do
           subject.fielddata_fields ['foo']
           assert_equal( { fielddata_fields: ['foo'] }, subject.to_hash )
