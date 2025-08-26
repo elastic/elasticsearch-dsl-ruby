@@ -85,6 +85,10 @@ module Elasticsearch
             @value.size
           end
 
+          def missing
+            @value.missing
+          end
+
           def <<(value)
             @value << value
           end

@@ -45,6 +45,7 @@ module Elasticsearch
 
           option_method :field
           option_method :size
+          option_method :missing
           option_method :shard_size
           option_method :order
           option_method :min_doc_count
